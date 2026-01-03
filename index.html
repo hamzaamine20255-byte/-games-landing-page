@@ -1,164 +1,669 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CPA Games Center</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-body{
-    font-family:Roboto,sans-serif;
-    background:#0F0F23;
-    color:#E0E0E0;
-    margin:0;
-}
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-header{
-    text-align:center;
-    margin-bottom:30px;
-}
-.logo{
-    font-size:30px;
-    font-weight:bold;
-    color:#fff;
-}
-.hero{
-    background:url("https://i.postimg.cc/C1KqDrFn/LXlAPV.jpg") center/cover no-repeat;
-    border-radius:15px;
-    padding:60px 20px;
-    text-align:center;
-    margin-bottom:40px;
-}
-.hero h1{font-size:42px;color:#fff;}
-.hero p{font-size:18px;}
-
-.games-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.game-card{
-    background:#1E1E3A;
-    border-radius:15px;
-    overflow:hidden;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.4);
-}
-.game-card img{
-    width:100%;
-    height:170px;
-    object-fit:cover;
-}
-.game-info{
-    padding:15px;
-}
-.game-info h3{
-    color:#fff;
-    margin-bottom:10px;
-}
-.game-details{
-    font-size:14px;
-    margin-bottom:15px;
-}
-.game-details span{
-    margin:0 6px;
-}
-.cta-button{
-    display:inline-block;
-    background:linear-gradient(to right,#9C27B0,#6A059B);
-    color:#fff;
-    padding:12px 35px;
-    border-radius:30px;
-    font-weight:bold;
-    text-decoration:none;
-    cursor:pointer;
-}
-.cta-button:hover{
-    transform:scale(1.05);
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<header>
-    <div class="logo">Games4You</div>
-</header>
-
-<div class="hero">
-    <h1>Discover Endless Fun!</h1>
-    <p>Install the best mobile games and get exclusive rewards</p>
-</div>
-
-<div class="games-grid">
-
-    <!-- GAME 1 -->
-    <div class="game-card">
-        <img src="https://static.divxland.org/wp-content/uploads/2025/10/carx-street-screenshot-1.png">
-        <div class="game-info">
-            <h3>CarX Street</h3>
-            <div class="game-details">
-                <span><i class="fab fa-android"></i> Android</span>
-                <span><i class="fab fa-apple"></i> iOS</span><br>
-                <span>⭐ 8.5</span> | <span>2.1GB</span>
-            </div>
-            <a class="cta-button cpa-link">Install Now</a>
-        </div>
-    </div>
-
-    <!-- GAME 2 -->
-    <div class="game-card">
-        <img src="https://images.wallpapersden.com/image/download/dota-2-logo-neon_Zmhnam2UmZqaraWkpJRmbmdlrWZlbWU.jpg">
-        <div class="game-info">
-            <h3>Dota 2</h3>
-            <div class="game-details">
-                <span><i class="fab fa-android"></i> Android</span>
-                <span><i class="fab fa-apple"></i> iOS</span><br>
-                <span>⭐ 7.9</span> | <span>1.7GB</span>
-            </div>
-            <a class="cta-button cpa-link">Install Now</a>
-        </div>
-    </div>
-
-    <!-- GAME 3 -->
-    <div class="game-card">
-        <img src="https://cdn.forza.net/strapi-uploads/assets/FH_5_Evergreen_Key_Art_Horizontal_3840x2160_RGB_337636ab7f.jpg">
-        <div class="game-info">
-            <h3>Forza Horizon 5</h3>
-            <div class="game-details">
-                <span><i class="fab fa-android"></i> Android</span>
-                <span><i class="fab fa-apple"></i> iOS</span><br>
-                <span>⭐ 8.5</span> | <span>2.8GB</span>
-            </div>
-            <a class="cta-button cpa-link">Install Now</a>
-        </div>
-    </div>
-
-</div>
-</div>
-
-<!-- CPA SCRIPT -->
-<script type="text/javascript" id="ogjs" src="https://mirror.modxplay.online/cl/js/1xx321"></script>
-
-<script>
-document.querySelectorAll('.cpa-link').forEach(function(btn){
-    btn.addEventListener('click', function(){
-        if(typeof og_load === "function"){
-            og_load();
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPA Games Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --dark-bg: #1A1A2E;
+            --main-bg: #0F0F23;
+            --card-bg: #1E1E3A;
+            --purple-cta: #8B43B8;
+            --purple-light: #A450D2;
+            --text-color: #E0E0E0;
+            --heading-color: #FFFFFF;
         }
-    });
-});
-</script>
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--heading-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            width: 250px;
+            text-align: left;
+            padding-right: 50px;
+        }
+
+        .search-box::after {
+            content: '🔎';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-color);
+        }
+
+        /* Hero Banner with Background Image */
+        .hero-banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/C1KqDrFn/LXlAPV.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            min-height: 250px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            color: var(--heading-color);
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 0 0 15px;
+            color: var(--heading-color);
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            color: var(--text-color);
+        }
+
+        /* Game Cards Section */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0 20px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: var(--heading-color);
+        }
+
+        .view-all {
+            color: var(--purple-light);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Game Cards */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding: 0 0 20px 0;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--purple-cta);
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-info h3 {
+            margin: 0 0 10px;
+            color: var(--heading-color);
+            font-size: 20px;
+        }
+
+        .game-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .game-details .platforms,
+        .game-details .stats {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .game-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Font Awesome Icons */
+        .game-details .icon {
+            font-size: 18px;
+        }
+
+        /* Colors for each icon */
+        .fa-android {
+            color: #3DDC84; /* Android green */
+        }
+        
+        .fa-apple {
+            color: #BDBDBD; /* A light gray for iOS */
+        }
+
+        .fa-star {
+            color: #FFD700; /* Gold color for rating star */
+        }
+        
+        .fa-database {
+            color: #5DADE2; /* Blue color for size icon */
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-image: linear-gradient(to right, #9C27B0, #6A059B);
+            color: var(--heading-color);
+            padding: 12px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-top: 60px;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            color: var(--purple-cta);
+            margin-bottom: 15px;
+        }
+
+        /* --- Media Queries for Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .search-box input {
+                width: 100%;
+                text-align: center;
+                padding-right: 20px;
+            }
+
+            .search-box::after {
+                right: 20px;
+            }
+
+            .hero-banner {
+                padding: 30px;
+                min-height: 200px;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .section-header h2 {
+                font-size: 24px;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .game-card img {
+                height: 150px;
+            }
+            
+            .features-grid {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Games4You</div>
+          
+        </header>
+
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Discover Endless Fun!</h1>
+                <p>The best exclusive offers for mobile games in one place.</p>
+            </div>
+        </section>
+        
+        <section class="games">
+            <div class="section-header">
+                <h2>Best Games</h2>
+                <a href="https://mirror.modxplay.online/cl/i/1xx321" class="view-all">View All</a>
+            </div>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://static.divxland.org/wp-content/uploads/2025/10/carx-street-screenshot-1.png">
+                    
+                
+                    <div class="game-info">
+                        <h3>CareX Street</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    2.1GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+<div class="game-card">
+                    <img src="https://images.wallpapersden.com/image/download/dota-2-logo-neon_Zmhnam2UmZqaraWkpJRmbmdlrWZlbWU.jpg" alt="Dota 2">
+                    <div class="game-info">
+                        <h3>Dota 2</h3>
+                        <div class="game-details">
+                             <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    1.7GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    7.9
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://i.ytimg.com/vi/ik5EgKtvEOc/maxresdefault.jpg" alt="Drive Zone Online">
+                    <div class="game-info">
+                        <h3>Drive Zone Online</h3>
+                        <div class="game-details">
+                             <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    1.3GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    9.2
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+                 <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://www.logo.wine/a/logo/BeamNG.drive/BeamNG.drive-Logo.wine.svg">
+                    
+                
+                    <div class="game-info">
+                        <h3>Bream.NG Drive</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    2.1GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+                 <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://cdn.forza.net/strapi-uploads/assets/FH_5_Evergreen_Key_Art_Horizontal_3840x2160_RGB_337636ab7f.jpg">
+                    
+                
+                    <div class="game-info">
+                        <h3>Forza Horizon 5 Mobile</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    2.8GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+                
+                 <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://www.tapsmart.com/wp-content/uploads/2018/01/Room-4.jpg">
+                    
+                
+                    <div class="game-info">
+                        <h3>The Room:Old Sins</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    780MB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+              <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt6498bc6e7dbddc33/650f1443e5c3927f546f0821/maxresdefault.jpg?width=1280&auto=webp&quality=80&format=jpg&disable=upscale">
+                
+                    <div class="game-info">
+                        <h3>Among Us</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    508MB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+              <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://puzzleretreat.com/images/screen1.jpg">
+                    
+                
+                    <div class="game-info">
+                        <h3>Puzzle Retreat</h3>
+                        <div class="game-details">
+                            <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    467MB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    8.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzW2UWGu3LidYqR0eeVwXtB0O6fCPx0HlTYQ&s" alt="Car Diving Open World Games">
+                    <div class="game-info">
+                        <h3>Car Diving Open World Games</h3>
+                        <div class="game-details">
+                             <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    1.7GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    7.9
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <img src="https://cdn.gsmarena.com/pics/13/11/gt-racing-2-review/gsmarena_001.jpg" alt="GT Racing 2">
+                    <div class="game-info">
+                        <h3>GT Racing 2</h3>
+                        <div class="game-details">
+                             <div class="platforms">
+                                <span>
+                                    <i class="fab fa-android icon"></i>
+                                    Android
+                                </span>
+                                <span>
+                                    <i class="fab fa-apple icon"></i>
+                                    iOS
+                                </span>
+                            </div>
+                            <div class="stats">
+                                <span>
+                                    <i class="fas fa-database icon"></i>
+                                    1.2GB
+                                </span>
+                                <span>
+                                    <i class="fas fa-star icon"></i>
+                                    9.5
+                                </span>
+                            </div>
+                        </div>
+                        <a href="https://mirror.modxplay.online/cl/i/1xx321" class="cta-button">Install Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Secure and Safe</h3>
+                    <p>All of our offers have been vetted to ensure a secure experience.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Exclusive Rewards</h3>
+                    <p>Enjoy exclusive perks and rewards with our offers.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Access</h3>
+                    <p>Start playing immediately with no delays.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
